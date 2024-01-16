@@ -42,4 +42,10 @@
     width: 2rem;
     height: 2rem;
   }
+
+  @include respond("phone") {
+    flex-basis: 100%;
+    flex-shrink: 0;
+    order: 5;
+  }
 }

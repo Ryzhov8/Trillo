@@ -2,8 +2,12 @@
   display: flex;
   align-items: stretch;
 
-  &__link {
+  &__link,
+  &__user {
     padding: 1rem 2rem;
+  }
+
+  &__link {
     position: relative;
     display: flex;
     align-items: center;
@@ -34,6 +38,7 @@
 
     font-size: 1rem;
     font-weight: 600;
+    line-height: 1;
     background-color: $color-primary;
     color: $color-gray-light-1;
   }
@@ -42,7 +47,6 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 1rem 2rem;
 
     &:hover,
     &:focus {

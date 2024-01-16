@@ -2,4 +2,8 @@
   display: flex;
   min-height: auto;
   flex-grow: 1;
+
+  @include respond("tab-port") {
+    flex-direction: column;
+  }
 }

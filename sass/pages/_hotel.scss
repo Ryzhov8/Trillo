@@ -18,8 +18,20 @@
     border-bottom: 1px solid $color-gray-light-3;
   }
 
+  &__overview-info {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+
+    @include respond("phone") {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 0;
+    }
+  }
+
   &__heading {
-    margin-right: 5rem;
     font-size: 2.4rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -51,9 +63,16 @@
     &:focus {
       background-color: $color-gray-light-3;
     }
+
+    @include respond("phone") {
+      padding: 0 1.5rem;
+    }
   }
 
   &__score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 1rem 2rem;
     align-self: stretch;
     text-align: center;
@@ -72,10 +91,14 @@
   &__main-content {
     display: flex;
     align-items: flex-start;
-    gap: 5rem;
+    gap: 3rem;
     height: 100%;
-    padding: 5rem;
+    padding: 4rem;
     background-color: $color-gray-light-3;
+
+    @include respond("phone") {
+      flex-direction: column;
+    }
   }
 
   &__main-info {

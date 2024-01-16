@@ -43,4 +43,37 @@
     width: 2rem;
     fill: $color-gray-light-1;
   }
+
+  @include respond("tab-port") {
+    position: relative;
+    top: 0;
+    z-index: 0;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      width: 25%;
+    }
+
+    &__link {
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
+
+      &::before {
+        z-index: -1;
+        transform-origin: center;
+        transform: scale(1%, 5%);
+      }
+    }
+  }
+
+  @include respond("phone") {
+    &__link {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
 }
