@@ -1,0 +1,167 @@
+.hotel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .gallery {
+    display: flex;
+
+    &__img {
+      width: 33.33%;
+    }
+  }
+
+  &__overview {
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    border-bottom: 1px solid $color-gray-light-3;
+  }
+
+  &__heading {
+    margin-right: 5rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-gray-dark-2;
+  }
+
+  &__location {
+    display: flex;
+    gap: 0.5rem;
+    align-self: stretch;
+    align-items: center;
+    margin-left: auto;
+    padding: 0 3rem;
+
+    &-icon {
+      height: 2rem;
+      width: 2rem;
+      fill: $color-primary;
+    }
+
+    &-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $color-primary;
+      border-bottom: 0.2rem solid $color-primary-light;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray-light-3;
+    }
+  }
+
+  &__score {
+    padding: 1rem 2rem;
+    align-self: stretch;
+    text-align: center;
+    background-color: $color-primary;
+    color: $color-gray-light-1;
+    font-size: 1rem;
+  }
+
+  &__number {
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 2.4rem;
+    line-height: 1;
+  }
+
+  &__main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+    height: 100%;
+    padding: 5rem;
+    background-color: $color-gray-light-3;
+  }
+
+  &__main-info {
+    flex: 0 0 60%;
+    padding: 0 3rem;
+    background-color: $color-gray-light-1;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+
+    & > * {
+      padding: 3rem 0;
+    }
+
+    & > *:not(:last-child) {
+      border-bottom: 1px solid $color-gray-light-3;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__benefits {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 1.5rem;
+    }
+
+    &-item {
+      flex: 0 0 50%;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      &::before {
+        content: "";
+        flex-shrink: 0;
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        mask-image: url(../img/chevron-thin-right.svg);
+        background-color: $color-primary;
+        mask-size: cover;
+      }
+    }
+  }
+
+  &__friends {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    color: $color-gray-dark-3;
+
+    &-list {
+      display: flex;
+    }
+
+    &-item:not(:first-child) {
+      margin-left: -1.5rem;
+    }
+
+    &-img {
+      height: 5.5rem;
+      border-radius: 50%;
+      border: 3.5px solid $color-gray-light-1;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem;
+    border-top: 1px solid $color-gray-light-3;
+    background-color: $color-gray-light-1;
+
+    &-text {
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-align: center;
+      color: $color-gray-dark-1;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: $color-gray-dark-2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link {
+  color: $color-primary;
+  border-bottom: 0.1rem solid $color-primary;
+  line-height: 1.6;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-dark;
+    border-bottom: 0.1rem solid $color-primary-dark;
+  }
+}

@@ -1,0 +1,10 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 20%;
+  gap: 5rem;
+  padding: 3rem 0;
+
+  background-color: $color-gray-dark-1;
+}

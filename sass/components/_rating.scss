@@ -1,0 +1,13 @@
+.rating {
+  display: flex;
+
+  &__item {
+    line-height: 0;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary;
+  }
+}

@@ -1,0 +1,23 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+@import "base/base";
+@import "base/typography";
+@import "base/animations";
+@import "base/utillities";
+
+@import "layouts/header";
+@import "layouts/content";
+@import "layouts/sidebar";
+
+@import "components/logo";
+@import "components/search";
+@import "components/user-nav";
+@import "components/side-nav";
+@import "components/legal";
+@import "components/rating";
+@import "components/user-reviews";
+@import "components/btn";
+
+@import "pages/hotel";
