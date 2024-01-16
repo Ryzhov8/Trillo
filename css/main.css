@@ -265,7 +265,7 @@ a {
   background-color: #eb2f64;
   z-index: -1;
   transform-origin: center left;
-  transform: scale(1%, 0%);
+  transform: scale(0%, 0%);
 }
 .side-nav__icon {
   flex-shrink: 0;
@@ -293,7 +293,7 @@ a {
   .side-nav__link::before {
     z-index: -1;
     transform-origin: center;
-    transform: scale(1%, 5%);
+    transform: scale(0%, 0%);
   }
 }
 @media (max-width: 37.5em) {
