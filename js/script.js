@@ -11,10 +11,10 @@ const fetchedData = [
   {
     type: "favorites",
     arr: [
-      { name: "Hotel las Palmas", img: "../img/las-palmas.jpg" },
-      { name: "Ciudad Maderas", img: "../img/ciudad-maderas.jpg" },
-      { name: "Xandari", img: "../img/xandari.jpg" },
-      { name: "Avenido Madera", img: "../img/avenido-madera.jpg" },
+      { name: "Hotel las Palmas", img: "./img/las-palmas.jpg" },
+      { name: "Ciudad Maderas", img: "./img/ciudad-maderas.jpg" },
+      { name: "Xandari", img: "./img/xandari.jpg" },
+      { name: "Avenido Madera", img: "./img/avenido-madera.jpg" },
     ],
   },
   {
@@ -22,34 +22,34 @@ const fetchedData = [
     arr: [
       {
         username: "Nick Smith",
-        avatar: "../img/user-1.jpg",
+        avatar: "./img/user-1.jpg",
         message:
           "Guess what? Just scored a sweet last-minute deal on a beachfront villa!",
       },
       {
         username: "Mary Thomas",
-        avatar: "../img/user-2.jpg",
+        avatar: "./img/user-2.jpg",
         message: "Hey there! Just booked a cozy cabin for our weekend getaway!",
       },
       {
         username: "Alex Rodriguez",
-        avatar: "../img/user-3.jpg",
+        avatar: "./img/user-3.jpg",
         message:
           "Exciting news! Booked tickets for a spontaneous trip to Paris",
       },
       {
         username: "Jason Patel",
-        avatar: "../img/user-4.jpg",
+        avatar: "./img/user-4.jpg",
         message: "Locked in a reservation for a foodie tour next weekend",
       },
       {
         username: "Kevin Chang",
-        avatar: "../img/user-5.jpg",
+        avatar: "./img/user-5.jpg",
         message: "Just booked a charming bed & breakfast in the mountains",
       },
       {
         username: "Emily Williams",
-        avatar: "../img/user-6.jpg",
+        avatar: "./img/user-6.jpg",
         message:
           "Booked tickets for a live concert next month! It's gonna be epic.",
       },
