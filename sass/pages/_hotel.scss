@@ -167,6 +167,10 @@
       height: 5.5rem;
       border-radius: 50%;
       border: 3.5px solid $color-gray-light-1;
+
+      @include respond("phone") {
+        border-width: 2.5px;
+      }
     }
   }
 

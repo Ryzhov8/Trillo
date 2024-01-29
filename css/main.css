@@ -44,6 +44,10 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
 }
 
 ul,
@@ -86,6 +90,11 @@ a {
     transform: scale(100%, 100%);
   }
 }
+.hiding {
+  display: none;
+  opacity: 0;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -103,7 +112,7 @@ a {
     position: relative;
     flex-wrap: wrap;
     row-gap: 2rem;
-    padding: 1rem 2rem 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -183,20 +192,34 @@ a {
   }
 }
 
-.user-nav {
+.user-nav__list {
   display: flex;
-  align-items: stretch;
 }
-.user-nav__link, .user-nav__user {
-  padding: 1rem 2rem;
-}
-.user-nav__link {
+.user-nav__item {
   position: relative;
-  display: flex;
-  align-items: center;
 }
-.user-nav__link:hover, .user-nav__link:focus {
-  background-color: #f0eeee;
+.user-nav__btn {
+  padding: 1.5rem;
+}
+.user-nav__btn.active, .user-nav__btn:hover {
+  background-color: #eb2f64;
+  color: #faf9f9;
+}
+.user-nav__btn.active .user-nav__icon, .user-nav__btn:hover .user-nav__icon {
+  fill: #333;
+}
+.user-nav__btn.active .user-nav__number, .user-nav__btn:hover .user-nav__number {
+  background-color: white;
+  color: #333;
+}
+@media (max-width: 37.5em) {
+  .user-nav__btn {
+    padding: 2rem;
+  }
+}
+.user-nav__user {
+  height: 100%;
+  padding: 0 1.5rem;
 }
 .user-nav__icon {
   height: 2.5rem;
@@ -224,15 +247,104 @@ a {
   align-items: center;
   gap: 2rem;
 }
-.user-nav__user:hover, .user-nav__user:focus {
-  background-color: #f0eeee;
-}
 .user-nav__user-img {
   height: 4rem;
   border-radius: 50%;
 }
 .user-nav__username {
   font-weight: 600;
+}
+.user-nav__icon, .user-nav__username, .user-nav__user-img, .user-nav__number {
+  pointer-events: none;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #faf9f9;
+  display: none;
+  opacity: 0;
+  border-bottom: 1px solid #f0eeee;
+  border-left: 1px solid #f0eeee;
+  border-right: 1px solid #f0eeee;
+}
+.dropdown--large {
+  width: 30rem;
+  border-top: 1rem solid #eb2f64;
+}
+.dropdown__heading {
+  padding: 1rem;
+  border-bottom: 1px solid #f0eeee;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #333;
+  text-align: center;
+}
+.dropdown__list {
+  max-height: 25rem;
+  overflow-y: scroll;
+}
+.dropdown__item:not(:last-child) {
+  border-bottom: 1px solid #f0eeee;
+}
+.dropdown__link {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+.dropdown__link:hover, .dropdown__link:focus {
+  background-color: #f4f2f2;
+}
+.dropdown__text {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.dropdown__img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.dropdown__empty {
+  text-align: center;
+  padding: 2rem 0;
+}
+.dropdown__username {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.dropdown__message {
+  font-size: 1.2rem;
+}
+.dropdown.active {
+  display: block;
+  opacity: 100%;
+}
+
+.user-menu__list {
+  width: 100%;
+}
+.user-menu__item:not(:last-child) {
+  border-bottom: 1px solid #f0eeee;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.user-menu__link:hover, .user-menu__link:focus {
+  background-color: #f4f2f2;
+}
+.user-menu__link:hover .user-menu__icon, .user-menu__link:focus .user-menu__icon {
+  fill: #eb2f64;
+}
+.user-menu__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #333;
 }
 
 .side-nav {
@@ -366,23 +478,19 @@ a {
 }
 .review__author {
   display: flex;
+  gap: 2rem;
   align-items: center;
-  gap: 1.5rem;
-}
-.review__username {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 2;
-}
-.review__data {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #999;
 }
 .review__img {
   width: 5rem;
+  height: 5rem;
   border-radius: 50%;
+}
+.review__username {
+  font-weight: 600;
+}
+.review__date {
+  font-size: 1.1rem;
 }
 .review__score {
   color: #eb2f64;
@@ -395,7 +503,6 @@ a {
   border-radius: 50px;
   font-size: 1.5rem;
   font-weight: 300;
-  line-height: 1;
   text-transform: uppercase;
   color: #faf9f9;
   background-image: linear-gradient(90deg, #ba265d, #ff3366);
@@ -576,6 +683,11 @@ a {
   height: 5.5rem;
   border-radius: 50%;
   border: 3.5px solid #faf9f9;
+}
+@media (max-width: 37.5em) {
+  .hotel__friends-img {
+    border-width: 2.5px;
+  }
 }
 .hotel__cta {
   display: flex;

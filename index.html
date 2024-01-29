@@ -35,26 +35,64 @@
       </form>
 
       <nav class="user-nav">
-        <a class="user-nav__link" href="#">
-          <svg class="user-nav__icon">
-            <use href="./img/sprite.svg#icon-bookmark" />
-          </svg>
-          <p class="user-nav__number">8</p>
-        </a>
-        <a class="user-nav__link" href="#">
-          <svg class="user-nav__icon">
-            <use href="./img/sprite.svg#icon-chat" />
-          </svg>
-          <p class="user-nav__number">5</p>
-        </a>
-        <a class="user-nav__user" href="#">
-          <img
-            class="user-nav__user-img"
-            src="./img/user.jpg"
-            alt="user photo"
-          />
-          <p class="user-nav__username">Mykyta</p>
-        </a>
+        <ul class="user-nav__list">
+          <li class="user-nav__item">
+            <button class="user-nav__btn favorites__btn" type="button">
+              <svg class="user-nav__icon">
+                <use href="./img/sprite.svg#icon-bookmark" />
+              </svg>
+            </button>
+            <div class="dropdown dropdown--large favorites">
+              <h2 class="dropdown__heading">Favorites</h2>
+            </div>
+          </li>
+          <li class="user-nav__item">
+            <button class="user-nav__btn messages__btn" type="button">
+              <svg class="user-nav__icon">
+                <use href="./img/sprite.svg#icon-chat" />
+              </svg>
+            </button>
+            <div class="dropdown dropdown--large messages">
+              <h2 class="dropdown__heading">Messages</h2>
+            </div>
+          </li>
+          <li class="user-nav__item">
+            <button class="user-nav__user user-nav__btn" type="button">
+              <img
+                class="user-nav__user-img"
+                src="./img/user.jpg"
+                alt="user photo"
+              />
+              <p class="user-nav__username">Mykyta</p>
+            </button>
+            <ul class="user-menu__list dropdown">
+              <li class="user-menu__item">
+                <a href="#" class="user-menu__link">
+                  <svg class="user-menu__icon">
+                    <use href="./img/sprite.svg#icon-user" />
+                  </svg>
+                  <p class="user-menu__text">User</p></a
+                >
+              </li>
+              <li class="user-menu__item">
+                <a href="#" class="user-menu__link">
+                  <svg class="user-menu__icon">
+                    <use href="./img/sprite.svg#icon-cog" />
+                  </svg>
+                  <p class="user-menu__text">Settings</p>
+                </a>
+              </li>
+              <li class="user-menu__item">
+                <a href="#" class="user-menu__link">
+                  <svg class="user-menu__icon">
+                    <use href="./img/sprite.svg#icon-squared-cross" />
+                  </svg>
+                  <p class="user-menu__text">Exit</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </nav>
     </header>
     <div class="content">
@@ -99,9 +137,39 @@
       </aside>
       <main class="hotel">
         <div class="gallery">
-          <img src="./img/hotel-1.jpg" alt="" class="gallery__img" />
-          <img src="./img/hotel-2.jpg" alt="" class="gallery__img" />
-          <img src="./img/hotel-3.jpg" alt="" class="gallery__img" />
+          <img
+            srcset="
+              ./img/hotel-1-small.jpg  200w,
+              ./img/hotel-1-medium.jpg 300w,
+              ./img/hotel-1.jpg        600w
+            "
+            sizes="(max-width: 900px) 33.33vw , 26.66vw"
+            alt=""
+            class="gallery__img"
+            loading="lazy"
+          />
+          <img
+            srcset="
+              ./img/hotel-2-small.jpg  200w,
+              ./img/hotel-2-medium.jpg 300w,
+              ./img/hotel-2.jpg        600w
+            "
+            sizes="(max-width: 900px) 33.33vw , 26.66vw"
+            alt=""
+            class="gallery__img"
+            loading="lazy"
+          />
+          <img
+            srcset="
+              ./img/hotel-3-small.jpg  200w,
+              ./img/hotel-3-medium.jpg 300w,
+              ./img/hotel-3.jpg        600w
+            "
+            sizes="(max-width: 900px) 33.33vw , 26.66vw"
+            alt=""
+            class="gallery__img"
+            loading="lazy"
+          />
         </div>
         <div class="hotel__overview">
           <div class="hotel__overview-info">
@@ -222,7 +290,7 @@
                   <img class="review__img" src="./img/user-1.jpg" alt="" />
                   <div>
                     <p class="review__username">Nick Smith</p>
-                    <time class="review__data" datetime="2023-02-23"
+                    <time class="review__date" datetime="2023-02-23"
                       >Feb 23rd, 2023</time
                     >
                   </div>
@@ -242,7 +310,7 @@
                   <img class="review__img" src="./img/user-2.jpg" alt="" />
                   <div>
                     <p class="review__username">Mary Thomas</p>
-                    <time class="review__data" datetime="2023-09-13"
+                    <time class="review__date" datetime="2023-09-13"
                       >Sep 13rd, 2023</time
                     >
                   </div>
@@ -265,4 +333,6 @@
       </main>
     </div>
   </body>
+
+  <script type="module" src="./js/script.js"></script>
 </html>

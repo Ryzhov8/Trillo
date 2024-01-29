@@ -1,0 +1,80 @@
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: $color-gray-light-1;
+  display: none;
+  opacity: 0;
+  border-bottom: 1px solid $color-gray-light-3;
+  border-left: 1px solid $color-gray-light-3;
+  border-right: 1px solid $color-gray-light-3;
+
+  &--large {
+    width: 30rem;
+    border-top: 1rem solid $color-primary;
+  }
+
+  &__heading {
+    padding: 1rem;
+    border-bottom: 1px solid $color-gray-light-3;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: $color-gray-dark-1;
+    text-align: center;
+  }
+
+  &__list {
+    max-height: 25rem;
+    overflow-y: scroll;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-gray-light-3;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray-light-2;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+
+  &__empty {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  &__username {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  &__message {
+    font-size: 1.2rem;
+  }
+
+  &.active {
+    display: block;
+    opacity: 100%;
+  }
+}

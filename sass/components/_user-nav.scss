@@ -1,21 +1,38 @@
 .user-nav {
-  display: flex;
-  align-items: stretch;
-
-  &__link,
-  &__user {
-    padding: 1rem 2rem;
+  &__list {
+    display: flex;
   }
 
-  &__link {
+  &__item {
     position: relative;
-    display: flex;
-    align-items: center;
+  }
 
-    &:hover,
-    &:focus {
-      background-color: $color-gray-light-3;
+  &__btn {
+    padding: 1.5rem;
+
+    &.active,
+    &:hover {
+      background-color: $color-primary;
+      color: $color-gray-light-1;
+
+      .user-nav__icon {
+        fill: $color-gray-dark-1;
+      }
+
+      .user-nav__number {
+        background-color: white;
+        color: $color-gray-dark-1;
+      }
     }
+
+    @include respond("phone") {
+      padding: 2rem;
+    }
+  }
+
+  &__user {
+    height: 100%;
+    padding: 0 1.5rem;
   }
 
   &__icon {
@@ -47,11 +64,6 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-
-    &:hover,
-    &:focus {
-      background-color: $color-gray-light-3;
-    }
   }
 
   &__user-img {
@@ -61,5 +73,12 @@
 
   &__username {
     font-weight: 600;
+  }
+
+  &__icon,
+  &__username,
+  &__user-img,
+  &__number {
+    pointer-events: none;
   }
 }

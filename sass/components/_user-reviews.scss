@@ -41,26 +41,22 @@
 
   &__author {
     display: flex;
+    gap: 2rem;
     align-items: center;
-    gap: 1.5rem;
-  }
-
-  &__username {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 2;
-  }
-
-  &__data {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: $color-gray-dark-3;
   }
 
   &__img {
     width: 5rem;
+    height: 5rem;
     border-radius: 50%;
+  }
+
+  &__username {
+    font-weight: 600;
+  }
+
+  &__date {
+    font-size: 1.1rem;
   }
 
   &__score {
